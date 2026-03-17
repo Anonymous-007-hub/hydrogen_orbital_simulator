@@ -6,10 +6,11 @@ A Python-based simulator for visualizing hydrogen atom orbitals using quantum me
 
 - **Wave Function Computation**: Implements the mathematical functions for hydrogen orbitals, including associated Legendre polynomials, Laguerre polynomials, and spherical harmonics.
 - **3D Visualization**: Uses Matplotlib to create 3D surface plots of orbital shapes.
-- **Two Visualization Modes**:
-  - `simulator_without_sign.py`: Plots the absolute value of the wave function (probability density).
-  - `simulator_with_sign.py`: Plots the signed wave function with positive and negative regions in different colors.
-- **Interactive Input**: Prompts for quantum numbers n, l, and m.
+- **Three Simulator Scripts**:
+  - `simulator_without_sign.py`: Plots the absolute value of the hydrogen orbital wave function (probability density).
+  - `simulator_with_sign.py`: Plots the signed hydrogen orbital wave function with positive and negative regions in different colors.
+  - `spherical_harmonics_simulator.py`: Visualizes the angular part of the wave function (spherical harmonics Y_lm) for given l and m.
+- **Interactive Input**: Prompts for quantum numbers n, l, and m (or l and m for spherical harmonics).
 - **Quantum Number Validation**: Ensures valid inputs according to quantum mechanics rules.
 
 ## Requirements
@@ -39,11 +40,17 @@ Run one of the simulator scripts:
 python simulator_without_sign.py
 # or
 python simulator_with_sign.py
+# or
+python spherical_harmonics_simulator.py
 ```
 
-When prompted, enter the quantum numbers:
+For the orbital simulators (`simulator_without_sign.py` and `simulator_with_sign.py`), enter the quantum numbers:
 - **n** (principal quantum number): Positive integer (1, 2, 3, ...)
 - **l** (azimuthal quantum number): Integer from 0 to n-1
+- **m** (magnetic quantum number): Integer from -l to +l
+
+For the spherical harmonics simulator (`spherical_harmonics_simulator.py`), enter:
+- **l** (azimuthal quantum number): Non-negative integer (0, 1, 2, ...)
 - **m** (magnetic quantum number): Integer from -l to +l
 
 ### Examples
